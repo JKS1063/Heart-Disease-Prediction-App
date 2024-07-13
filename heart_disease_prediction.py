@@ -18,12 +18,10 @@ def heart_disease_prediction(input_data):
     else:
         return "Have Heart disease"
     
-gender_labels = [0, 1]
 gender_string_labels = {0: "Female", 1: "Male"}
 
 chest_pain_cat = {0: 'Typical Angina', 1: 'Atypical Angina', 2: 'Non-anginal pain', 3: 'Asymptomatic'}
 
-fbs_labels = [0, 1]
 fbs_cat = {0:"<= 120 mg/dL", 1:">120 mg/dL"}
 
 restecg_cat = {0:"Normal", 1:"ST-T wave abnormality", 2:"Left ventricular hypertrophy (LVH)"}
