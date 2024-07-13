@@ -14,7 +14,7 @@ def heart_disease_prediction(input_data):
     print(prediction)
 
     if prediction[0] == 0:
-        return "Does not have heart disease"
+        return "No heart disease"
     else:
         return "Have Heart disease"
     
