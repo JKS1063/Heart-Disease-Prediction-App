@@ -73,7 +73,7 @@ def show_explore_page():
     ax3 = sns.histplot(x = df.age[df.heart_disease == 0], kde = True, edgecolor = 'black', color = 'blue')
     ax3.lines[0].set_color('green')
     plt.xlabel('Age', fontweight = 'bold')
-    plt.ylabel('Number of People', fontweight = 'bold')
+    plt.ylabel('Number of Patients', fontweight = 'bold')
     plt.title('Age with respect to No heart disease', fontweight = 'bold')
     ax3.bar_label(ax3.containers[0], fontsize = 8)
 
@@ -83,7 +83,7 @@ def show_explore_page():
     ax4 = sns.histplot(x = df.age[df.heart_disease == 1], kde = True, edgecolor = 'black', color = 'orange')
     ax4.lines[0].set_color('red')
     plt.xlabel('Age', fontweight = 'bold')
-    plt.ylabel('Number of People', fontweight = 'bold')
+    plt.ylabel('Number of Patients', fontweight = 'bold')
     plt.title('Age with respect to heart disease', fontweight = 'bold')
     ax4.bar_label(ax4.containers[0], fontsize = 8)
 
