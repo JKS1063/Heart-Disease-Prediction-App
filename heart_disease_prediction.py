@@ -47,43 +47,43 @@ def main():
     st.title("Heart Disease Prediction App")
 
     # Getting input data from user
-    age = st.text_input('Enter age')
+    age = st.text_input('**Enter age**')
 
-    gender = st.radio("Select Gender:", options=list(gender_string_labels.keys()),
+    gender = st.radio("**Select Gender**", options=list(gender_string_labels.keys()),
                        format_func=lambda x: gender_string_labels[x], horizontal=True)
 
-    cp = st.selectbox("Select Chest pain (cp)", options=list(chest_pain_cat.keys()),
+    cp = st.selectbox("**Select Chest pain (cp)**", options=list(chest_pain_cat.keys()),
                       format_func=lambda x: chest_pain_cat[x])
     
-    trestbps = st.text_input("Enter Resting Blood pressure (trestbps)")
+    trestbps = st.text_input("**Enter Resting Blood pressure (trestbps)**")
 
-    chol = st.text_input("Enter Serum cholesterol (chol)")
+    chol = st.text_input("**Enter Serum cholesterol (chol)**")
 
-    fbs = st.radio("Select Fasting Blood Sugar (fbs)", options=list(fbs_cat.keys()),
+    fbs = st.radio("**Select Fasting Blood Sugar (fbs)**", options=list(fbs_cat.keys()),
                    format_func=lambda x: fbs_cat[x], horizontal=True)
 
-    restecg = st.radio("Select Resting ECG result (restecg)", options=list(restecg_cat.keys()),
+    restecg = st.radio("**Select Resting ECG result (restecg)**", options=list(restecg_cat.keys()),
                        format_func=lambda x: restecg_cat[x])
 
-    thalach = st.text_input("Enter Maximum Heart Rate (thalach)")
+    thalach = st.text_input("**Enter Maximum Heart Rate (thalach)**")
 
-    exang = st.radio("Select Exercise Induced Angina (exang)", options=list(exang_cat.keys()),
+    exang = st.radio("**Select Exercise Induced Angina (exang)**", options=list(exang_cat.keys()),
                      format_func= lambda x: exang_cat[x])
 
-    oldpeak = st.text_input("Enter ST depression (mm)  (oldpeak)")
+    oldpeak = st.text_input("**Enter ST depression (mm)  (oldpeak)**")
 
-    slope = st.radio("Select Slope", options=list(slope_cat.keys()),
+    slope = st.radio("**Select Slope**", options=list(slope_cat.keys()),
                      format_func=lambda x: slope_cat[x], horizontal=True)
 
-    ca = st.selectbox("Select Number of Coronary Artery affected (ca)", options=list(ca_cat.keys()),
+    ca = st.selectbox("**Select Number of Coronary Artery affected (ca)**", options=list(ca_cat.keys()),
                       format_func=lambda x: ca_cat[x])
     
-    thal = st.selectbox("Select Thallium stress (ca)", options=list(thal_cat.keys()),
+    thal = st.selectbox("**Select Thallium stress (ca)**", options=list(thal_cat.keys()),
                         format_func=lambda x: thal_cat[x])
     
     prediction = ''
 
-    if st.button('Heat Disease Prediction'):
+    if st.button('**Heat Disease Prediction**'):
         prediction = heart_disease_prediction([age, gender, cp, trestbps, chol, fbs, restecg, thalach,
                                                exang, oldpeak, slope, ca, thal])
         
