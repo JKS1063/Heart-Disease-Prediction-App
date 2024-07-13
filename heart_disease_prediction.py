@@ -87,5 +87,6 @@ def main():
         
         return st.success(prediction)
 
-# if __name__ == "__main__":
-#     main()
+
+if st.button("**Reset**"):
+    st.session_state.clear()
