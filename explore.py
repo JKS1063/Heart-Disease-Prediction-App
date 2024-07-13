@@ -51,6 +51,8 @@ def show_explore_page():
 
     st.title("Explore Heart Disease prediction dataset")
 
+    st.write("The following data analysis is with respect to UCI Heart Dataset")
+
     fig1, ax1 = plt.subplots(figsize = (5,5))
     ax1.pie(x = df.heart_disease.value_counts(), startangle=90, 
         autopct = lambda p:f'{p:.2f}%, \n {p*sum(df.heart_disease.value_counts().values)/100 :.0f} Patients', 
