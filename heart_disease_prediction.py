@@ -85,7 +85,11 @@ def main():
         prediction = heart_disease_prediction([age, gender, cp, trestbps, chol, fbs, restecg, thalach,
                                                exang, oldpeak, slope, ca, thal])
         
-        return st.success(prediction)
-
+        if prediction[0] == 0:
+            return st.success(prediction)
+        else:
+            return st.warning(prediction)
+        
+        
 # if __name__ == "__main__":
 #     main()
