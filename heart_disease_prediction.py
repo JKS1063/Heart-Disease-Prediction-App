@@ -17,6 +17,8 @@ def heart_disease_prediction(input_data):
         return "No heart disease"
     else:
         return "Have Heart disease"
+    
+
 
 gender_string_labels = {0: "Female", 1: "Male"}
 
@@ -75,12 +77,14 @@ def main():
     
     thal = st.selectbox("**Select Thallium stress (ca)**", options=list(thal_cat.keys()),
                         format_func=lambda x: thal_cat[x])
+                        
     
     prediction = ''
 
     if st.button('**Heat Disease Prediction**'):
         prediction = heart_disease_prediction([age, gender, cp, trestbps, chol, fbs, restecg, thalach,
                                                exang, oldpeak, slope, ca, thal])
+        
         
         return st.success(prediction)
 
