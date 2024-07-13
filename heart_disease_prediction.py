@@ -17,7 +17,7 @@ def heart_disease_prediction(input_data):
         return "No heart disease"
     else:
         return "Have Heart disease"
-    
+
 gender_string_labels = {0: "Female", 1: "Male"}
 
 chest_pain_cat = {0: 'Typical Angina', 1: 'Atypical Angina', 2: 'Non-anginal pain', 3: 'Asymptomatic'}
@@ -85,11 +85,7 @@ def main():
         prediction = heart_disease_prediction([age, gender, cp, trestbps, chol, fbs, restecg, thalach,
                                                exang, oldpeak, slope, ca, thal])
         
-        if prediction[0] == 0:
-            return st.success(prediction)
-        else:
-            return st.warning(prediction)
-        
-        
+        return st.success(prediction)
+
 # if __name__ == "__main__":
 #     main()
